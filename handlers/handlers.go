@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"net/http",
+	"net/http"
 	"golang-fifa-world-cup-web-service/data"
 )
 
@@ -26,7 +26,7 @@ func ListWinners(res http.ResponseWriter, req *http.Request) {
 	if year == ""{
 		res.Write(winners)
 	} else{
-		filteredWinners, err := data.ListAllByYear()
+		filteredWinners, err := data.ListAllByYear(year)
 		if err != nil{
 			res.WriteHeader(http.StatusBadRequest)
 			return
