@@ -1,7 +1,8 @@
 package handlers
 
 import (
-	"net/http"
+	"net/http",
+	"golang-fifa-world-cup-web-service/data"
 )
 
 // RootHandler returns an empty body status code
